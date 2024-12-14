@@ -1,8 +1,4 @@
-const age = 12
-const yearsLeft = 18 - age
-
-if (age >= 18) {
-  console.log(`Good hoe, come suck it!`)
-} else {
-  console.log(`Bigger hoe still come suck it kid.`)
-}
+const age = 23
+age >= 18
+  ? console.log(`I like 18 years old woman`)
+  : console.log(`I like gay too`)

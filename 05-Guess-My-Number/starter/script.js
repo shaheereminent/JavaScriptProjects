@@ -51,7 +51,7 @@ const checkAnswer = function () {
 // Game Losing Function
 const checkLose = function () {
   if (playerScore < 1) {
-    message.textContent = '❌ You lost!'
+    message.textContent = '💥 You lost!'
     score.textContent = 0
     check.disabled = true
     document.querySelector('body').style.backgroundColor = 'red'

@@ -1,34 +1,36 @@
-// const teamDolphinesAverage = ((97 + 112 + 101) / 3).toFixed(2)
-// const teamKoalasAverage = ((88 + 91 + 110) / 3).toFixed(2)
+/* 
+CHALLENGE #3
+There are two gymnastics teams: Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
 
-// if (teamDolphinesAverage > teamKoalasAverage) {
-//   console.log(`Team Dolphones Wins by Average Point of ${teamDolphinesAverage}`)
-// } else if (
-//   teamDolphinesAverage === teamKoalasAverage &&
-//   teamDolphinesAverage > 100 &&
-//   teamKoalasAverage > 100
-// ) {
-//   console.log(
-//     `It's a draw between these two matches each team has avg point of ${teamDolphinesAverage} & ${teamKoalasAverage}`
-//   )
-// }
+Your tasks:
 
-// const teamDolphinesAverage = ((97 + 112 + 101) / 3).toFixed(2)
-// const teamKoalasAverage = ((109 + 95 + 123) / 3).toFixed(2)
+1. Calculate the average score for each team, using the test data included below. The average score for Dolphins should be assigned to the scoreDolphins variable, and the average score of Koalas should be assigned to the scoreKoalas variable.
 
-// if (teamDolphinesAverage > teamKoalasAverage) {
-//   console.log(`Team Dolphones Wins by Average Point of ${teamDolphinesAverage}`)
-// } else if (
-//   teamDolphinesAverage === teamKoalasAverage &&
-//   teamDolphinesAverage > 100 &&
-//   teamKoalasAverage > 100
-// ) {
-//   console.log(
-//     `It's a draw between these two matches each team has avg point of ${teamDolphinesAverage} & ${teamKoalasAverage}`
-//   )
-// }
-// console.log(`hehe`)
+2. Compare the team's average scores to determine the winner of the competition, and print to the console:
 
-const teamDolphinesAverage = ((96 + 108 + 89) / 3).toFixed(2)
-const scoreKoalas = ((88 + 91 + 110) / 3).toFixed(2)
-console.log(teamDolphinesAverage, scoreKoalas)
+"Dolphins win the trophy" if Dolphins win, or
+
+"Koalas win the trophy" if Koalas win, or
+
+"Both win the trophy" if their average scores are equal.
+
+
+
+TEST DATA: Dolphins scored 96, 108, and 89. Koalas scored 88, 91, and 110.
+
+
+
+👋 OPTIONAL: You can watch my solution in video format in the next lecture
+*/
+
+const scoreDolphins = (96 + 108 + 89) / 3
+const scoreKoalas = (88 + 91 + 110) / 3
+console.log(scoreDolphins, scoreKoalas)
+
+if (scoreDolphins > scoreKoalas) {
+  console.log(`Dolphins win the trophy`)
+} else if (scoreDolphins < scoreKoalas) {
+  console.log(`Koalas win the trophy`)
+} else {
+  console.log(`Both win the trophy`)
+}

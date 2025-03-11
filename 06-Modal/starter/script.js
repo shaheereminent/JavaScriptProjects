@@ -4,32 +4,38 @@ const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
 const btnOpenModal = document.querySelectorAll('.show-modal');
 
-//Toggle Modal function
-const toggleModal = function (class1, class2, toggle) {
-  class1.classList[toggle]('hidden');
-  class2.classList[toggle]('hidden');
-};
+// Dynamic Manipulating Classes Function
+function dynamicManipulatingClasses(elName, methodName, className) {
+  elName.classList[methodName](className);
+}
 
-// Open Modal Button Function
+// Selecting Modal Button Dynamically
 for (let i = 0; i < btnOpenModal.length; i++) {
   btnOpenModal[i].addEventListener('click', function () {
-    toggleModal(modal, overlay, 'remove');
+    dynamicManipulatingClasses(modal, 'remove', 'hidden');
+    dynamicManipulatingClasses(overlay, 'remove', 'hidden');
   });
 }
 
-// Closing Model Via X Button
-btnCloseModal.addEventListener('click', function () {
-  toggleModal(modal, overlay, 'add');
-});
+// Close Modal Function
+function closeModal() {
+  dynamicManipulatingClasses(modal, 'add', 'hidden');
+  dynamicManipulatingClasses(overlay, 'add', 'hidden');
+}
 
-// Closing Model Via Anywhere in the Screen 'Overlay' Button
-overlay.addEventListener('click', function () {
-  toggleModal(modal, overlay, 'add');
-});
+// Open Modal Function
+function openModal() {
+  dynamicManipulatingClasses(modal, 'remove', 'hidden');
+  dynamicManipulatingClasses(overlay, 'remove', 'hidden');
+}
 
-//  Closing model via Escape Button
+// Closing modal with Escape key
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-    toggleModal(modal, overlay, 'add');
+    closeModal();
   }
 });
+
+// Closing modal with clicks
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);

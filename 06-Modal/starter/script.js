@@ -34,6 +34,7 @@ document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
     closeModal();
   }
+  
 });
 
 // Closing modal with clicks
